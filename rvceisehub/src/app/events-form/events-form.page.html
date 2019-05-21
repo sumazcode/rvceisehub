@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/events-list"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add Event</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+  <form [formGroup]="form">
+    <ion-grid>
+
+        <ion-row>
+          <ion-col size-md="6" offset-md="3">
+            <ion-item>
+              <ion-label position="floating">Title</ion-label>
+              <ion-input type="text" formControlName="title"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size-sm="6" offset-sm="3">
+            <ion-item>
+              <ion-label position="floating">Short Description</ion-label>
+              <ion-textarea rows="3" formControlName="description"></ion-textarea>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row *ngIf="!form.get('description').valid && form.get('description').touched">
+          <ion-col size-sm="6" offset-sm="3">
+            <p>Description must be between 1 and 180 characters.</p>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size-md="6" offset-md="3">
+            <ion-item>
+              <ion-label position="floating">Venue</ion-label>
+              <ion-input type="text" formControlName="venue"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size-sm="6" offset-sm="3">
+              <ion-item>
+                <ion-label position="floating">Date</ion-label>
+                <ion-datetime
+                  display-format="DD MMM, YYYY HH:mm" min="2019-01-01"
+                  max="2030-12-31"
+                  formControlName="date"
+                ></ion-datetime>
+              </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size-sm="6" offset-sm="3">
+            <ion-item>
+              <ion-label position="floating">Event related to domain</ion-label>
+              <ion-select interface="popover" placeholder="Select domain" formControlName="category">
+                <ion-select-option value="Data Analytics">Data Analytics</ion-select-option>
+                <ion-select-option value="Big Data">Big Data</ion-select-option>
+                <ion-select-option value="Cloud Computing">Cloud Computing</ion-select-option>
+                <ion-select-option value="Professional Development">Professional Development</ion-select-option>
+                <ion-select-option value="Other">Cloud Computing</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size-sm="6" offset-sm="3">
+            <ion-item>
+              <ion-button fill="solid" expand="block" [disabled]="!form.valid" (click)="onCreateForm()">
+                <ion-icon slot="start" name="share"></ion-icon>
+                Broadcast Event
+              </ion-button>
+            </ion-item>      
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+    </form>
+  </div>
+</ion-content>

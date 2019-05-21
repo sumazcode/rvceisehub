@@ -1,0 +1,16 @@
+{
+    "faculty": [
+        {
+            "staffId": "1",
+            "name": "XYZ"
+        },
+        {
+            "staffId": "2",
+            "name": "ABC"
+        },
+        {
+            "staffId": "3",
+            "name": "PQR"
+        }
+    ]
+}
