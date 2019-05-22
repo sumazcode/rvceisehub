@@ -15,11 +15,11 @@ export class AppComponent {
       url: '/events-list',
       icon: 'home'
     },
-    {
+/*     {
       title: 'Students',
       url: '/students-main',
       icon: 'list'
-    },
+    }, */
     {
       title: 'Faculty',
       url: '/faculty-list',

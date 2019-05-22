@@ -2,15 +2,24 @@
     "faculty": [
         {
             "staffId": "1",
-            "name": "XYZ"
+            "name": "Prof. Rajashekhar Murthy",
+            "profile": "Completed Ph. D in NLP, working in RVCE",
+            "yearsofexp": 20,
+            "imageurl": "./favicon.png"
         },
         {
             "staffId": "2",
-            "name": "ABC"
+            "name": "Prof. Gopalkrishna",
+            "profile": "Industry4_0",
+            "yearsofexp": 25,
+            "imageurl":"./favicon.png"
         },
         {
             "staffId": "3",
-            "name": "PQR"
+            "name": "Prof. Smitha",
+            "profile": "Big data and Analytics, Agile expert",
+            "yearsofexp": 10,
+            "imageurl": "./favicon.png"
         }
     ]
 }

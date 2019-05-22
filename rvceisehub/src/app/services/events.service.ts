@@ -4,7 +4,9 @@ import { map } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 
 import { EventData } from '../model/events-model';
+import { environment } from '../../environments/environment';
 
+const BACKEND_URL = environment.apiUrl + '/events/';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +19,7 @@ export class EventsService {
   }
 
   getEventList() {
-    this.http.get< { message: string, events: any }>('http://localhost:3000/events')
+    this.http.get< { message: string, events: any }>(BACKEND_URL)
              .pipe(
                map(eventData => {
                  return eventData.events.map(event => {
@@ -52,7 +54,7 @@ export class EventsService {
 
   addEvent(event: EventData) {
     console.log(event);
-    this.http.post< {message: string, eventId: string}>('http://localhost:3000/events', event)
+    this.http.post< {message: string, eventId: string}>(BACKEND_URL, event)
                 .subscribe(responseData => {
                   const id = responseData.eventId;
                   event.id = id;
@@ -65,7 +67,7 @@ export class EventsService {
   }
 
   deleteEvent(eventId: string) {
-    this.http.delete('http://localhost:3000/events/' + eventId)
+    this.http.delete(BACKEND_URL + eventId)
             .subscribe( () => {
               const updatedEvents = this.eventlist.filter(event => event.id !== eventId);
               this.eventlist = updatedEvents;

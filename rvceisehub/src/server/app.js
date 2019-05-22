@@ -26,20 +26,29 @@ app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader(
       "Access-Control-Allow-Headers",
-      "Origin, X-Requested-With, Content-Type, Accept"
+      "Origin, X-Requested-With, Content-Type, Accept, Authorization"
     );
     res.setHeader(
       "Access-Control-Allow-Methods",
-      "GET, POST, PATCH, DELETE, OPTIONS"
+      "GET, POST, PATCH, DELETE, PUT, OPTIONS"
     );
     next();
 });
 
 //Routes
+app.get("", (req, res, next) => {
+  Event.find().then(documents => {
+      res.status(200).json({
+          message: "Get Request in empty braces: Events fetched successfully!",
+          events: documents
+      });
+  });
+});
+
 app.get("/events", (req, res, next) => {
   Event.find().then(documents => {
       res.status(200).json({
-          message: "Events fetched successfully!",
+          message: "Get Request in /events: Events fetched successfully!",
           events: documents
       });
   });

@@ -1,5 +1,7 @@
 {
   "name": "rvceisehub",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
