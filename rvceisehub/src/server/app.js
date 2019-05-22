@@ -14,6 +14,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 //Mongo Connection
 const mongoURI = "mongodb+srv://suma:rhGUzXBm88LtIuBV@cluster0-qxkpd.mongodb.net/test?retryWrites=true";
+
+//Local server
+//const mongoURI = "mongodb://localhost/events_hub";
 mongoose.connect(mongoURI).then(() => {
     console.log("Connected to database!");
 })

@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'students-register-form', loadChildren: './students-register-form/students-register-form.module#StudentsRegisterFormPageModule' },
   { path: 'students-rate-form', loadChildren: './students-rate-form/students-rate-form.module#StudentsRateFormPageModule' },
   { path: 'faculty-list', loadChildren: './faculty-list/faculty-list.module#FacultyListPageModule' },
-  { path: 'faculty-view-details', loadChildren: './faculty-view-details/faculty-view-details.module#FacultyViewDetailsPageModule' },
+  { path: 'faculty-view-details/:id', loadChildren: './faculty-view-details/faculty-view-details.module#FacultyViewDetailsPageModule' },
   { path: 'faculty-upload-form', loadChildren: './faculty-upload-form/faculty-upload-form.module#FacultyUploadFormPageModule' },
   { path: 'login-form', loadChildren: './login-form/login-form.module#LoginFormPageModule' }
 ];

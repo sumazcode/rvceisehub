@@ -5,21 +5,28 @@
             "name": "Prof. Rajashekhar Murthy",
             "profile": "Completed Ph. D in NLP, working in RVCE",
             "yearsofexp": 20,
-            "imageurl": "./favicon.png"
+            "imageurl": "https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
         },
         {
             "staffId": "2",
             "name": "Prof. Gopalkrishna",
             "profile": "Industry4_0",
             "yearsofexp": 25,
-            "imageurl":"./favicon.png"
+            "imageurl":"https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
         },
         {
             "staffId": "3",
             "name": "Prof. Smitha",
             "profile": "Big data and Analytics, Agile expert",
             "yearsofexp": 10,
-            "imageurl": "./favicon.png"
+            "imageurl": "https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
+        },
+        {
+            "staffId": "4",
+            "name": "Prof. Nagraj",
+            "profile": "Virtual Reality, Networks expert",
+            "yearsofexp": 15,
+            "imageurl": "https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
         }
     ]
 }
